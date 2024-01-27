@@ -482,7 +482,7 @@
     },
     {
         "period_id": "2023-12",
-        "quota_id": "QR-DOH",
+        "quota_id": "QR-MLE",
         "Dest": "DOH",
         "Quota": 15
     },
@@ -1168,7 +1168,7 @@
     },
     {
         "period_id": "2024-01",
-        "quota_id": "QR-DOH",
+        "quota_id": "QR-MLE",
         "Dest": "DOH",
         "Quota": 13
     },
