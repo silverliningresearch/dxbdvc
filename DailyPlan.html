@@ -68,8 +68,8 @@
         var data = new google.visualization.DataTable();
 
         data.addColumn('string', 'Time');
-        data.addColumn('string', 'Terminal');
-        data.addColumn('string', 'Gate');
+        //data.addColumn('string', 'Terminal');
+        //data.addColumn('string', 'Gate');
         data.addColumn('string', 'Flight');
         data.addColumn('string', 'To');
         //data.addColumn('string', 'DOOP');
@@ -86,8 +86,8 @@
           var row = daily_plan_data[i];
             { 
                 data.addRows([[row.Date_Time,
-                row.TER, 
-                row.Gate, 
+                //row.TER, 
+                //row.Gate, 
                 row.Flight, row.DestName, 
                 //row.doop, 
                 Number(row.remaining_flights), 
@@ -118,10 +118,10 @@
 
         //create fiter
         var terminal_filter_options = {
-          'filterColumnLabel': 'Terminal',
+          'filterColumnLabel': 'To',
           "ui": {"label": "", 
                 "labelStacking": 'horizotal',
-                "caption": "Filter by Terminal",
+                "caption": "Filter by Destination",
                 }
         };
         
@@ -133,10 +133,10 @@
 
         //create fiter
         var gate_filter_options = {
-          'filterColumnLabel': 'Gate',
+          'filterColumnLabel': 'Flight',
           "ui": {"label": "", 
                 "labelStacking": 'horizotal',
-                "caption": "Filter by Gate",
+                "caption": "Filter by Flight",
                 }
         };
         
@@ -162,7 +162,10 @@
 
         var view = new google.visualization.DataView(data);
         view.hideColumns([priority_col, priority_col-1]); //hide priority one
+
         //document.getElementById("terminal_filter_div").style.display = "none";
+        document.getElementById("gate_filter_div").style.display = "none";
+
         dashboard.draw(view);
 
          //overall_status

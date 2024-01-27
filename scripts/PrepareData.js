@@ -59,12 +59,8 @@ function initCurrentTimeVars() {
   
   console.log("current_period: ", current_period);
   switch(current_period) {
-    case "2023-12":      
-      total_quota = 1000;
-      break;      
-
     default:
-      total_quota = 1000;
+      total_quota = 800;
       break;
   }
 }
@@ -125,7 +121,8 @@ function prepareInterviewData() {
   quota_data.length = 0;
   for (i = 0; i < quota_data_temp.length; i++) {
     if ((quota_data_temp[i].Quota>0)
-         && (quota_data_temp[i].period_id == current_period))
+        // && (quota_data_temp[i].period_id == current_period)
+        )
     {
       quota_data.push(quota_data_temp[i]);
     }
@@ -169,6 +166,9 @@ function prepareInterviewData() {
 
     //airport_airline
     flight.quota_id = flight.AirlineCode + "-" + flight.Dest;//code for compare
+
+    flight.Destname_org = flight.DestName;
+    flight.DestName = flight.Dest + " (" +  flight.DestName + ")";
 
     //current_period:2023-02
     //flight.Date: 08-02-2023
