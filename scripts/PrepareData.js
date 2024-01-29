@@ -89,7 +89,7 @@ function notDeparted(flight_time) {
   var flight_time_value = flight_time.substring(0,2) * 60 + flight_time.substring(2,4)*1;
   var result = (flight_time_value > current_time_value);
 
-  result = true;
+  //result = true;
   return (result);
 }
 
@@ -139,7 +139,7 @@ function prepareInterviewData() {
 
     //current_period: 2023-12
     //InterviewDate: 2023-04-01
-    if (current_period == interview.InterviewDate.substring(0,7))//"2023-04-01",
+    //if (current_period == interview.InterviewDate.substring(0,7))//"2023-04-01",
     {
       if (interview["quota_id"]) {
         var quota_id = '"quota_id"' + ":" + '"' +  interview["quota_id"] + '", ';
@@ -172,7 +172,8 @@ function prepareInterviewData() {
 
     //current_period:2023-02
     //flight.Date: 08-02-2023
-    if (current_period == flight.Date.substring(6,10) + "-" +  flight.Date.substring(3,5)) { 
+    //if (current_period == flight.Date.substring(6,10) + "-" +  flight.Date.substring(3,5)) 
+    { 
       this_month_flight_list.push(flight);
     }		 
 
