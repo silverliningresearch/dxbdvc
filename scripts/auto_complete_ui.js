@@ -148,7 +148,11 @@ function changed_handler(val) {
   console.log('changed_handler: ', val);
   console.log('currentSearchQuestion: ', currentSearchQuestion);
   switch (currentSearchQuestion) {
-
+    case "Q1D": //Flight number
+      api.fn.answers({Q1D_show:  val});
+      api.fn.answers({urlVar20:  val});
+      $('.rt-btn.rt-btn-next').show(); 
+      break;  
     default:
       break;         
   }
