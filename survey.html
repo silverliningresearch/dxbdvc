@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOHA - Late Call Survey</title>
+    <title>DXB T3 Queue Survey</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link
@@ -22,7 +22,7 @@
       href="https://survalyzereu.blob.core.windows.net/public/assets/dx.light.css"
     />
     <link
-      href="https://survalyzer.survalyzer.eu/assets/themes/default/rt-theme.min.css"
+      href="https://survalyzer.survalyzer.eu/assets/themes/default/rt-theme.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -30,16 +30,13 @@
 
   <body>
     <survalyzer-survey
-      surveyhash="vtdndfiqly"
+      surveyhash="daebdnjtru"
       tenant="silverlining"
     ></survalyzer-survey>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://survalyzer.survalyzer.eu/assets/survalyzer-survey.js"></script>
 
-    <script src="data/DOH_departures_flight_list.js"></script>
-    <script src="scripts/flight_search.js"></script>
-    <script src="scripts/auto_complete_ui.js"></script>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -52,11 +49,9 @@
             
             switch (api.fn.getCurrentPageIndex()) {
               case 3:
-                show_flight_search_box("Q1D"); //flight
                 break;
 
-                default:
-                aui_hide_external_search_box();
+              default:
                 break;
             }
           }    
